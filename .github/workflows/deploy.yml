@@ -6,9 +6,8 @@ on:
 
 jobs:
   deployment:
-    runs-on: ubuntu-latest
-
     environment: ${{ inputs.deployment_environment }}
+    runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v4
