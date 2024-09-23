@@ -10,6 +10,10 @@ permissions:
 
 jobs:
   call-workflow-in-local-repo:
+    strategy:
+      matrix:
+        env_supported:
+          [DEV, TEST]
     uses: ./.github/workflows/deploy.yml
     with:
       deployment_environment: "DEV"
