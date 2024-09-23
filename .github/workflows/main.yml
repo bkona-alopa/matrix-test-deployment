@@ -22,6 +22,7 @@ jobs:
     uses: ./.github/workflows/deploy.yml
     with:
       deployment_environment: ${{ matrix.env_supported }}
+      product_name: "DEV"
 
   call-workflow-in-local-repo-TEST:
     if: ${{ inputs.environment == 'TEST' }}
@@ -32,3 +33,4 @@ jobs:
     uses: ./.github/workflows/deploy.yml
     with:
       deployment_environment: ${{ matrix.env_supported }}
+      product_name: "TEST"

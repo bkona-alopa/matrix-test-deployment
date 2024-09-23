@@ -3,6 +3,8 @@ on:
     inputs:
       deployment_environment:
         type: string
+      product_name:
+        type: string
 
 permissions:
   id-token: write
@@ -20,3 +22,8 @@ jobs:
       - name: test
         run: |
           echo "test: ${{ vars.ENV_NAME }}"
+
+      - name: cat prop file
+        run: |
+          echo "file name is : ${{ inputs.product_name }}_build_check_parameters.json"
+          cat "${{ inputs.product_name }}_build_check_parameters.json"
