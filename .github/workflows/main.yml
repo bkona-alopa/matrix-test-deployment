@@ -9,7 +9,7 @@ permissions:
   deployments: write
 
 jobs:
-  caling-deployment:
-  uses: ./.github/workflows/deploy.yml
-  with:
-    deployment_environment: "DEV"
+  call-workflow-in-local-repo:
+    uses: ./.github/workflows/deploy.yml
+    with:
+      deployment_environment: "DEV"
