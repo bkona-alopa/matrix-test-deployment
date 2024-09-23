@@ -1,0 +1,9 @@
+on:
+  push:
+    - main
+
+jobs:
+  caling-deployment:
+  uses: ./github/workflows/deploy.yml
+  with:
+    deploymemnt_environment: "DEV"

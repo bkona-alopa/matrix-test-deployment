@@ -1,0 +1,18 @@
+on:
+  workflow_call:
+    inputs:
+      deployment_environment:
+        type: environment
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+
+    environment: ${{ inputs.deployment_environment }}
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: test
+        run: |
+          echo "test: ${{ vars.ENV_NAME }}"
