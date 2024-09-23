@@ -3,6 +3,11 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write
+  contents: read
+  deployments: write
+
 jobs:
   caling-deployment:
   uses: ./.github/workflows/deploy.yml

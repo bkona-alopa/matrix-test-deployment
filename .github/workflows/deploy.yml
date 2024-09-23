@@ -4,6 +4,11 @@ on:
       deployment_environment:
         type: string
 
+permissions:
+  id-token: write
+  contents: read
+  deployments: write
+
 jobs:
   deployment:
     environment: ${{ inputs.deployment_environment }}
