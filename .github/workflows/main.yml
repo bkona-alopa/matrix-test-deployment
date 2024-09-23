@@ -16,4 +16,4 @@ jobs:
           [DEV, TEST]
     uses: ./.github/workflows/deploy.yml
     with:
-      deployment_environment: "DEV"
+      deployment_environment: ${{ matrix.env_supported }}
