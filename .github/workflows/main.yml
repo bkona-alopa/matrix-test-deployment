@@ -1,7 +1,11 @@
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        options:
+          - DEV
+          - TEST
 
 permissions:
   id-token: write
@@ -9,11 +13,22 @@ permissions:
   deployments: write
 
 jobs:
-  call-workflow-in-local-repo:
+  call-workflow-in-local-repo-DEV:
+    if: ${{ github.event.inputs.environment == 'DEV' }}
     strategy:
       matrix:
         env_supported:
-          [DEV, TEST]
+          [DEV, DEVEU]
+    uses: ./.github/workflows/deploy.yml
+    with:
+      deployment_environment: ${{ matrix.env_supported }}
+
+  call-workflow-in-local-repo-TEST:
+    if: ${{ github.event.inputs.environment == 'TEST' }}
+    strategy:
+      matrix:
+        env_supported:
+          [TEST, TESTEU]
     uses: ./.github/workflows/deploy.yml
     with:
       deployment_environment: ${{ matrix.env_supported }}
