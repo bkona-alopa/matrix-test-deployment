@@ -7,4 +7,4 @@ jobs:
   caling-deployment:
   uses: ./.github/workflows/deploy.yml
   with:
-    deploymemnt_environment: "DEV"
+    deployment_environment: "DEV"
