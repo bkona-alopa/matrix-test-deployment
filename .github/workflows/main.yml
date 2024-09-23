@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   call-workflow-in-local-repo-DEV:
-    if: ${{ github.event.inputs.environment == 'DEV' }}
+    if: ${{ inputs.environment == 'DEV' }}
     strategy:
       matrix:
         env_supported:
@@ -24,7 +24,7 @@ jobs:
       deployment_environment: ${{ matrix.env_supported }}
 
   call-workflow-in-local-repo-TEST:
-    if: ${{ github.event.inputs.environment == 'TEST' }}
+    if: ${{ inputs.environment == 'TEST' }}
     strategy:
       matrix:
         env_supported:
