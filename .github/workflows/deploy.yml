@@ -2,7 +2,7 @@ on:
   workflow_call:
     inputs:
       deployment_environment:
-        type: string
+        type: environment
 
 permissions:
   id-token: write
