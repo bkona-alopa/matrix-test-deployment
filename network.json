@@ -1,5 +1,5 @@
 {
-  "country": "$MOBILE_CONFIG_VALUES",
+  "country": $MOBILE_CONFIG_VALUES,
   "model_number": "jbd75dbdl",
   "version_number": "2.4.0.319",
   "mfg_date": "2020-11-01"
