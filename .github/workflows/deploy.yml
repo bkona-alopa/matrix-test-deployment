@@ -46,7 +46,7 @@ jobs:
 
       - name: Substitute env variables in network.json file
         env:
-          MOBILE_CONFIG_VALUES: ${{ toJson(env.MOBILE_CONFIG_VALUES) }}
+          MOBILE_CONFIG_VALUES: ${{ fromJson(env.MOBILE_CONFIG_VALUES) }}
         uses: danielr1996/envsubst-action@1.1.0
         with:
           input: "./network.json"
