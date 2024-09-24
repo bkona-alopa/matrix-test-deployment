@@ -54,7 +54,7 @@ jobs:
 
       - name: testing construction
         run: |
-          echo -n "{\"country\":${{ env.MOBILE_CONFIG_VALUES }},\"model_number\":\"${MODELNUMBER}\",\"version_number\":\"${SERVERVERSION}\",\"mfg_date\":\"${MFGDATE}\"} | jq --raw-output" > Network-Final.json
+          echo -n "{\"country\":${{ env.MOBILE_CONFIG_VALUES }},\"model_number\":\"${MODELNUMBER}\",\"version_number\":\"${SERVERVERSION}\",\"mfg_date\":\"${MFGDATE}\"} |  sed -e 's/^"//' -e 's/"$//" > Network-Final.json
 
       - name: final test
         run: |
