@@ -25,7 +25,7 @@ jobs:
 
       - name: filtering mobile configs
         run: |
-          echo "$(cat ./test.json | jq '(.| .MOBILE_CONFIG_VALUES | .ISAGE_URLS')" > ios_build_config_values.json
+          echo "$(cat ./test.json | jq '(.| .MOBILE_CONFIG_VALUES | .ISAGE_URLS)')" > ios_build_config_values.json
 
       - name: prop file json to env variables
         uses: antifree/json-to-variables@v1.2.0
