@@ -35,7 +35,7 @@ jobs:
       - name: test
         id: test
         run: |
-          echo "MOBILE_CONFIG_VALUES=$(cat ios_build_config_values.json)" >> "$GITHUB_OUTPUT"
+          echo "MOBILE_CONFIG_VALUES=$({{ fromJson(cat ios_build_config_values.json))" >> "$GITHUB_OUTPUT"
 
       - name: Substitute env variables in network.json file
         env:
