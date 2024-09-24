@@ -38,11 +38,11 @@ jobs:
           MOBILE_CONFIG_VALUES=$(cat ios_build_config_values.json)
           ESCAPED_MOBILE_CONFIG_VALUES=$(echo $MOBILE_CONFIG_VALUES | jq -c '.')
 
-          echo "MOBILE_CONFIG_VALUES=$(echo $MOBILE_CONFIG_VALUES | jq -c '.')" >> "$GITHUB_OUTPUT"
+          echo "MOBILE_CONFIG_VALUES=$(echo $MOBILE_CONFIG_VALUES | jq -c '.')" >> "$GITHUB_ENV"
 
       - name: Substitute env variables in network.json file
         env:
-          MOBILE_CONFIG_VALUES: ${{ steps.test.outputs.MOBILE_CONFIG_VALUES }}
+          MOBILE_CONFIG_VALUES: ${{ env.MOBILE_CONFIG_VALUES }}
         uses: danielr1996/envsubst-action@1.1.0
         with:
           input: "./network.json"
