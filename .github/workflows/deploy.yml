@@ -23,6 +23,10 @@ jobs:
         run: |
           echo "test: ${{ vars.ENV_NAME }}"
 
+      - name: filtering mobile configs
+        run: |
+          echo "$(cat ./test.json | jq '(.| .MOBILE_CONFIG_VALUES | .ISAGE_URLS')" > ios_build_config_values.json
+
       - name: prop file json to env variables
         uses: antifree/json-to-variables@v1.2.0
         with:
@@ -30,4 +34,4 @@ jobs:
 
       - name: test
         run: |
-          echo "prop"
+          cat ios_build_config_values.json
