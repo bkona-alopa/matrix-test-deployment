@@ -35,11 +35,12 @@ jobs:
       - name: test
         id: test
         run: |
-          echo "MOBILE_CONFIG_VALUES=$({{ fromJson(cat ios_build_config_values.json))" >> "$GITHUB_OUTPUT"
+          MOBILE_CONFIG_VALUES=$(cat ios_build_config_values.json)
+          echo "MOBILE_CONFIG_VALUES=$MOBILE_CONFIG_VALUES" >> "$GITHUB_OUTPUT"
 
       - name: Substitute env variables in network.json file
         env:
-          MOBILE_CONFIG_VALUES: ${{ fromJson(steps.test.outputs.MOBILE_CONFIG_VALUES) }}
+          MOBILE_CONFIG_VALUES: ${{ toJson(steps.test.outputs.MOBILE_CONFIG_VALUES) }}
         uses: danielr1996/envsubst-action@1.1.0
         with:
           input: "./network.json"
