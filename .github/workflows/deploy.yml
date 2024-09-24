@@ -44,13 +44,17 @@ jobs:
 
           echo "MOBILE_CONFIG_VALUES=$(echo $MOBILE_CONFIG_VALUES | jq -c '.')" >> "$GITHUB_ENV"
 
-      - name: Substitute env variables in network.json file
-        env:
-          MOBILE_CONFIG_VALUES: "${{ env.MOBILE_CONFIG_VALUES }}"
-        uses: danielr1996/envsubst-action@1.1.0
-        with:
-          input: "./network.json"
-          output: "./Network-Final.json"
+      # - name: Substitute env variables in network.json file
+      #   env:
+      #     MOBILE_CONFIG_VALUES: "${{ env.MOBILE_CONFIG_VALUES }}"
+      #   uses: danielr1996/envsubst-action@1.1.0
+      #   with:
+      #     input: "./network.json"
+      #     output: "./Network-Final.json"
+
+      - name: testing construction
+        run: |
+          echo -n "{\\"country\\":${{ env.MOBILE_CONFIG_VALUES }},\\"model_number\\":\\"${MODELNUMBER}\\",\\"version_number\\":\\"${SERVERVERSION}\\",\\"mfg_date\\":\\"${MFGDATE}\\"}" > Network-Final.json
 
       - name: final test
         run: |
