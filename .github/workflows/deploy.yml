@@ -32,14 +32,13 @@ jobs:
         with:
           filename: test.json
 
-      # - name: test
-      #   id: test
-      #   run: |
-      #     MOBILE_CONFIG_VALUES=$(echo "$(jq '(.| .MOBILE_CONFIG_VALUES | .ISAGE_URLS)' test.json)" | tr -d '\n' | tr -d '\r' )
-      #     # echo "MOBILE_CONFIG_VALUES=$MOBILE_CONFIG_VALUES" >> "$GITUB_OUTPUT"
+      - name: test
+        id: test
+        run: |
+          MOBILE_CONFIG_VALUES=$(cat ios_build_config_values.json)
+          ESCAPED_MOBILE_CONFIG_VALUES=$(echo $MOBILE_CONFIG_VALUES | jq -c '.')
 
-      #     MOBILE_CONFIG_VALUES=$(cat ./ios_build_config_values.json)
-      #   echo "name=${MOBILE_CONFIG_VALUES//'%'/'%25'}" >>"$GITHUB_OUTPUTS"
+          echo "MOBILE_CONFIG_VALUES=$ESCAPED_MOBILE_CONFIG_VALUES" >> "$GITHUB_OUTPUT"
 
       - name: Substitute env variables in network.json file
         env:
