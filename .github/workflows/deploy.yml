@@ -23,7 +23,11 @@ jobs:
         run: |
           echo "test: ${{ vars.ENV_NAME }}"
 
-      - name: cat prop file
+      - name: prop file json to env variables
+        uses: antifree/json-to-variables@v1.2.0
+        with:
+          filename: test.json
+
+      - name: test
         run: |
-          echo "file name is : ${{ inputs.product_name }}_build_check_parameters.json"
-          cat "${{ inputs.product_name }}_build_check_parameters.json"
+          echo "prop"

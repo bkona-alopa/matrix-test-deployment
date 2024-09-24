@@ -1,0 +1,294 @@
+{
+  "cluster_name": "isage-DEV",
+  "region": "us-east-1",
+  "account_id": "424114987786",
+  "subnet1": "subnet-00b2bf92ea4fcf25b",
+  "subnet2": "subnet-0c28e3822286f118e",
+  "fargate_SG": "sg-0dba3c31c35ce18fe",
+  "ENVI": "DEV",
+  "ROLE_NAME": "Jenkins-Deployer-Role-DEV",
+  "SERVICE_DESIRED_COUNT": "1",
+  "DB_HOST_NAME": [
+    "isage-rds-dev.cpmitgob8exh.us-east-1.rds.amazonaws.com"
+  ],
+  "ETL_DEPLOYMENT_COUNTRY": [
+    "us"
+  ],
+  "ETL_EXTACT_DATA_BUCKET": [
+    "dev-us-etl-data-files"
+  ],
+  "SF_TRIGGER_TIME": [
+    "0 12 * * ? *"
+  ],
+  "DB_NAME_ENV": "isagedevdb",
+  "DB_USER_NAME": "jenkinsuser",
+  "AWS_REGION": "us-east-1",
+  "BUCKET_NAME_FOR_ASSETS": "dev-isage-resources",
+  "S3_BUCKET_MOBILE_BUILD_FOLDER": "dev",
+  "MOBILE_BUILD_TYPE": "DEV",
+  "BUILD_MODE": "dev",
+  "S3_BUCKET_URL": "https://d1nvqtyfegjy1l.cloudfront.net",
+  "MOBILE_BUILDS_S3_BUCKET": "mobile-builds-isage",
+  "DWH_DB_HOST_NAME": "etl-db-dev.cpmitgob8exh.us-east-1.rds.amazonaws.com",
+  "DWH_DB_NAME_ENV": "etldb",
+  "DWH_DB_USER_NAME": "jenkinsuser",
+  "DWH_BASE_REGION": "us-east-1",
+  "DWH_BASE_ENV": "DEV",
+  "BUCKET_FOR_ETL_PIPELINE": "dev-isage-pipeline-etl-files",
+  "ETL_SG": "sg-0e568793821c43f23",
+  "ETL_TASK_RUNNING_SG": [
+    "sg-05aef2810408cf0f6"
+  ],
+  "ETL_TASK_RUNNING_SUBNET": "subnet-0163905d043d0e34d",
+  "ETL_SNS_NAME": "Normal_priority_DEV",
+  "STATE_MACHINE_ROLE_NAME": "StepFunction-role-for-ECS-DEV",
+  "STEP_FUNCTION_INVOKE_ROLE": "AWS_Events_Invoke_Step_Functions_DEV",
+  "ROLL_BACK_ENABLED": "0",
+  "DB_IDENTIFIER": [
+    "isage-rds-dev"
+  ],
+  "DWH_DB_IDENTIFIER": "etl-db-dev",
+  "APP_CONFIG_VALUES": {
+    "APP_US_ENV_DB_HOST": "isage-rds-dev.cpmitgob8exh.us-east-1.rds.amazonaws.com",
+    "APP_BR_ENV_DB_HOST": "isage-rds-dev.cpmitgob8exh.us-east-1.rds.amazonaws.com",
+    "APP_CO_ENV_DB_HOST": "NA",
+    "APP_IT_ENV_DB_HOST": "isage-rds-dev.cpmitgob8exh.us-east-1.rds.amazonaws.com",
+    "APP_USDC_ENV_DB_HOST": "isage-rds-dev.cpmitgob8exh.us-east-1.rds.amazonaws.com",
+    "APP_CH_ENV_DB_HOST": "NA",
+    "APP_IN_ENV_DB_HOST": "NA",
+    "APP_SA_ENV_DB_HOST": "NA",
+    "APP_HU_ENV_DB_HOST": "NA",
+    "APP_SK_ENV_DB_HOST": "NA",
+    "APP_FR_ENV_DB_HOST": "NA",
+    "APP_AT_ENV_DB_HOST": "NA",
+    "APP_DK_ENV_DB_HOST": "NA",
+    "APP_FI_ENV_DB_HOST": "NA",
+    "APP_DE_ENV_DB_HOST": "NA",
+    "APP_CA_ENV_DB_HOST": "NA",
+    "APP_AU_ENV_DB_HOST": "NA",
+    "APP_JP_ENV_DB_HOST": "NA",
+    "APP_ENV_DB_NAME": "isagedevdb",
+    "APP_ENV_DB_USER": "appuser",
+    "APP_ENV_TYPE": "development",
+    "APP_ENV_DOMAIN": "dev.nprod.isageapp.com",
+    "APP_ENV_PORT": "8001",
+    "APP_ENV_RMQ_NOTIFICATION": "notificationQueue",
+    "APP_ENV_RMQ_AUDIT": "auditQueue",
+    "APP_ENV_RMQ_EMAIL": "emailQueue",
+    "APP_ENV_RMQ_HOST": "rmq-dev.nprod.isageapp.com",
+    "APP_ENV_RMQ_PORT": "5672",
+    "APP_ENV_RMQ_SMS": "otpQueue",
+    "APP_ENV_RMQ_USER": "isagedevrmq",
+    "APP_ENV_RMQ_PROTOCOL": "amqps",
+    "APP_ENV_EMAIL_AWS_JSON": "{\\\"ch\\\":{\\\"from_address\\\":\\\"support-no-reply@us.dosecheckapp.com\\\",\\\"emailSendingARN\\\":\\\"arn:aws:ses:us-east-1:627148342923:identity/us.dosecheckapp.com\\\"},\\\"usdc\\\":{\\\"from_address\\\":\\\"support-no-reply@us.dosecheckapp.com\\\",\\\"emailSendingARN\\\":\\\"arn:aws:ses:us-east-1:627148342923:identity/us.dosecheckapp.com\\\"},\\\"au\\\":{\\\"from_address\\\":\\\"support-no-reply@us.dosecheckapp.com\\\",\\\"emailSendingARN\\\":\\\"arn:aws:ses:us-east-1:627148342923:identity/us.dosecheckapp.com\\\"},\\\"fi\\\":{\\\"from_address\\\":\\\"support-no-reply@us.dosecheckapp.com\\\",\\\"emailSendingARN\\\":\\\"arn:aws:ses:us-east-1:627148342923:identity/us.dosecheckapp.com\\\"},\\\"dk\\\":{\\\"from_address\\\":\\\"support-no-reply@us.dosecheckapp.com\\\",\\\"emailSendingARN\\\":\\\"arn:aws:ses:us-east-1:627148342923:identity/us.dosecheckapp.com\\\"},\\\"sk\\\":{\\\"from_address\\\":\\\"support-no-reply@us.dosecheckapp.com\\\",\\\"emailSendingARN\\\":\\\"arn:aws:ses:us-east-1:627148342923:identity/us.dosecheckapp.com\\\"},\\\"fr\\\":{\\\"from_address\\\":\\\"support-no-reply@us.dosecheckapp.com\\\",\\\"emailSendingARN\\\":\\\"arn:aws:ses:us-east-1:627148342923:identity/us.dosecheckapp.com\\\"},\\\"de\\\":{\\\"from_address\\\":\\\"support-no-reply@us.dosecheckapp.com\\\",\\\"emailSendingARN\\\":\\\"arn:aws:ses:us-east-1:627148342923:identity/us.dosecheckapp.com\\\"},\\\"hu\\\":{\\\"from_address\\\":\\\"support-no-reply@us.dosecheckapp.com\\\",\\\"emailSendingARN\\\":\\\"arn:aws:ses:us-east-1:627148342923:identity/us.dosecheckapp.com\\\"},\\\"sa\\\":{\\\"from_address\\\":\\\"support-no-reply@us.dosecheckapp.com\\\",\\\"emailSendingARN\\\":\\\"arn:aws:ses:us-east-1:627148342923:identity/us.dosecheckapp.com\\\"},\\\"in\\\":{\\\"from_address\\\":\\\"support-no-reply@us.dosecheckapp.com\\\",\\\"emailSendingARN\\\":\\\"arn:aws:ses:us-east-1:627148342923:identity/us.dosecheckapp.com\\\"},\\\"it\\\":{\\\"from_address\\\":\\\"support-no-reply@us.dosecheckapp.com\\\",\\\"emailSendingARN\\\":\\\"arn:aws:ses:us-east-1:627148342923:identity/us.dosecheckapp.com\\\"},\\\"br\\\":{\\\"from_address\\\":\\\"support-no-reply@us.dosecheckapp.com\\\",\\\"emailSendingARN\\\":\\\"arn:aws:ses:us-east-1:627148342923:identity/us.dosecheckapp.com\\\"},\\\"us\\\":{\\\"from_address\\\":\\\"support-no-reply@us.amalgamrx.com\\\",\\\"emailSendingARN\\\":\\\"arn:aws:ses:us-east-1:627148342923:identity/us.amalgamrx.com\\\"},\\\"ca\\\":{\\\"from_address\\\":\\\"support-no-reply@us.dosecheckapp.com\\\",\\\"emailSendingARN\\\":\\\"arn:aws:ses:us-east-1:627148342923:identity/us.dosecheckapp.com\\\"},\\\"ca\\\":{\\\"from_address\\\":\\\"support-no-reply@us.dosecheckapp.com\\\",\\\"emailSendingARN\\\":\\\"arn:aws:ses:us-east-1:627148342923:identity/us.dosecheckapp.com\\\"},\\\"in\\\":{\\\"from_address\\\":\\\"support-no-reply@us.dosecheckapp.com\\\",\\\"emailSendingARN\\\":\\\"arn:aws:ses:us-east-1:627148342923:identity/us.dosecheckapp.com\\\"},\\\"de\\\":{\\\"from_address\\\":\\\"support-no-reply@us.dosecheckapp.com\\\",\\\"emailSendingARN\\\":\\\"arn:aws:ses:us-east-1:627148342923:identity/us.dosecheckapp.com\\\"},\\\"at\\\":{\\\"from_address\\\":\\\"support-no-reply@us.dosecheckapp.com\\\",\\\"emailSendingARN\\\":\\\"arn:aws:ses:us-east-1:627148342923:identity/us.dosecheckapp.com\\\"}}",
+    "APP_EMAIL_SENDING_REGION": "us-east-1",
+    "APP_SMS_SENDING_REGION": "us-east-1",
+    "APP_ENV_CONTACT_US_EMAIL": "contact@amalgamrx.com",
+    "APP_ENV_DB_POOL_SIZE": "20",
+    "APP_ENV_SUBSCRIBER_DB_POOL_SIZE": "5",
+    "APP_ENV_ANDROID_BUILD": "2.0",
+    "APP_ENV_IOS_BUILD": "2.0",
+    "APP_ENV_PROTO": "http",
+    "APP_ENV_DEFAULT_ACC_ID": "f225ff50-afa2-11e9-8fea-134ce3058444",
+    "APP_ENV_DEPLOYMENT_COUNTRY": "1",
+    "APP_RUN_WITH_HTTPS": "1",
+    "APP_S3_EMAILATTACHMENTS_BUCKET": "dev-emailattachments",
+    "APP_ENV_FORCE_UPDATE_ANDROID": "1",
+    "APP_ENV_FORCE_UPDATE_IOS": "1",
+    "APP_ENV_IS_SMS_ENABLED": "false",
+    "APP_ENV_RESOURCE_PREFIX": "resources-",
+    "APP_CAMPAIGN_EMAIL": "{\\\"fi\\\":\\\"drani@alopasoft.com\\\",\\\"de\\\":\\\"drani@alopasoft.com\\\",\\\"dk\\\":\\\"drani@alopasoft.com\\\",\\\"fr\\\":\\\"drani@alopasoft.com\\\",\\\"fr\\\":\\\"drani@alopasoft.com\\\",\\\"hu\\\":\\\"drani@alopasoft.com\\\",\\\"it\\\":\\\"drani@alopasoft.com\\\",\\\"in\\\":\\\"drani@alopasoft.com\\\",\\\"ca\\\":\\\"drani@alopasoft.com\\\",\\\"sa\\\":\\\"drani@alopasoft.com\\\",\\\"sk\\\":\\\"drani@alopasoft.com\\\",\\\"us\\\":\\\"drani@alopasoft.com\\\"}",
+    "APP_PIPELINE_FILES_BUCKET": "dev-isage-pipeline-etl-files",
+    "APP_ETL_SG_ID": "sg-0e568793821c43f23",
+    "APP_ETL_SUBNET_ID": "subnet-056ea2b12c9f2925e",
+    "APP_ETL_AMI_ID": "ami-042ce4b896d1ab4fa",
+    "APP_DWH_DB_HOST": "etl-db-dev.cpmitgob8exh.us-east-1.rds.amazonaws.com",
+    "APP_DWH_DB_USER": "appuser",
+    "APP_ENV_TRANS_DB_USER": "etlappuser",
+    "APP_DWH_DB_NAME": "etldb",
+    "APP_TABLEAU_ACCESS_TOKEN_NAME": "n/a",
+    "APP_DS_TAG": "n/a",
+    "APP_ANALYTICS_LOAD_ENABLED": "1",
+    "APP_DWH_LOAD_ENABLED": "1",
+    "APP_ENV_PUBLIC_KEY": "-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlRl51pQHDArfIKQW2j4V\\naPxzxDRUrzvHeL8AFJJgNZcDMY3P/ZR2kAtcwA+267NR/q76jMF0Zmxd9bShlq1u\\n/dImXsdFe6tbiv2FL38Oi1FUlq3HGgTijMZVszvn2ERKPyuGQiJ/JbvnBvau/Vsf\\nPBCJ40afilbYToBgXXC+bnVdNdd1VTGgzQ2orpms983BXcLhXi4fTwIsjibx4S5N\\npIj7azO+sV806M40BxOWRlyAYAV5Ern58OvNbh8lb1U/Xm2BFV3jrx1NE6goBnS9\\nqjBCG/Z72tCwbJDTuV7gKcfx8Qq8ZPbn4g5R8dy9JK94lOdLq7S4qSDOSNN8gxSk\\nNwIDAQAB\\n-----END PUBLIC KEY-----",
+    "APP_ENV_AVHANA_KEY": "-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlQzz83U94Aso8mxjwL1j\\nQIsoiJTyN5jVXofm/iWM+pLCyKYVyQpGtMPQxoiqUTcr8/k1mHOImzpc9TA422nu\\nxTo0itPjbsnSLcoB2gxevxARYTEwVy1129v/IRFsqvorkN73xh2wAIo2Viqt1BgQ\\nffXAvAS+EDwi64EwlbeRAeQM9g3fdSE2l0iiqI/SI7Xk3Swq5vduNse3pzsIeLfh\\nhET/83ZWZpw1GtV96L0BzzaQ/FiLzxlfMGp/31MYbA+txjAMDq4S2Vtae/OIpDTN\\nbp3eIFX/Y/MEpPV0CGsPfzjbnwd+cnTSue9/gggP0eX/lQZDRXuyNhxVBaSF1CbG\\nRQIDAQAB\\n-----END PUBLIC KEY-----",
+    "APP_ENV_AVHANA_DATA_FOR_PRESCRIBE": "https://staging.avhana.com/isage/getdoctorPatientdetailsForPrescribe",
+    "APP_ENV_AVHANA_DATA_FOR_LOGBOOK": "https://staging.avhana.com/isage/getdoctorPatientdetailsForLogbook",
+    "APP_DB_EXTRACT_ENABLED": "1",
+    "APP_TABLEAU_REFRESH_ENABLED": "0",
+    "APP_SNS_TOPIC_ARN": "arn:aws:sns:us-east-1:424114987786:App-notification-SNS",
+    "APP_SNS_SUBSCRIPTION_ENDPOINT": "https://deven.nprod.isageapp.com,https://devpt.nprod.dosecheckapp.com,https://devit.nprod.dosecheckapp.com,https://deven-usdc.nprod.dosecheckapp.com,https://deves-usdc.nprod.dosecheckapp.com",
+    "APP_ENV_PINPOINT_JSON": "{\\\"usdc\\\":{\\\"idpId\\\":\\\"us-east-1:60d2c23b-80e5-4070-81e0-17b7e8ecbf8f\\\",\\\"appId\\\":\\\"573c1d2a12b545fe9254133d352482a8\\\"},\\\"ch\\\":{\\\"idpId\\\":\\\"eu-central-1:09875a7e-8590-4fe6-9a1a-308dc6430170\\\",\\\"appId\\\":\\\"d0db232ef2374935acc3e657dce663cf\\\"},\\\"br\\\":{\\\"idpId\\\":\\\"us-east-1:60d2c23b-80e5-4070-81e0-17b7e8ecbf8f\\\",\\\"appId\\\":\\\"573c1d2a12b545fe9254133d352482a8\\\"},\\\"it\\\":{\\\"idpId\\\":\\\"us-east-1:60d2c23b-80e5-4070-81e0-17b7e8ecbf8f\\\",\\\"appId\\\":\\\"573c1d2a12b545fe9254133d352482a8\\\"},\\\"hu\\\":{\\\"idpId\\\":\\\"eu-central-1:09875a7e-8590-4fe6-9a1a-308dc6430170\\\",\\\"appId\\\":\\\"d0db232ef2374935acc3e657dce663cf\\\"},\\\"fi\\\":{\\\"idpId\\\":\\\"eu-central-1:09875a7e-8590-4fe6-9a1a-308dc6430170\\\",\\\"appId\\\":\\\"d0db232ef2374935acc3e657dce663cf\\\"},\\\"dk\\\":{\\\"idpId\\\":\\\"eu-central-1:09875a7e-8590-4fe6-9a1a-308dc6430170\\\",\\\"appId\\\":\\\"d0db232ef2374935acc3e657dce663cf\\\"},\\\"sa\\\":{\\\"idpId\\\":\\\"us-east-1:28f56d3f-0b25-419d-a46e-bedf777464e9\\\",\\\"appId\\\":\\\"7f64df9e3ad243478e123bc044356ad3\\\"},\\\"us\\\":{\\\"idpId\\\":\\\"us-east-1:60d2c23b-80e5-4070-81e0-17b7e8ecbf8f\\\",\\\"appId\\\":\\\"573c1d2a12b545fe9254133d352482a8\\\"},\\\"sk\\\":{\\\"idpId\\\":\\\"eu-central-1:09875a7e-8590-4fe6-9a1a-308dc6430170\\\",\\\"appId\\\":\\\"d0db232ef2374935acc3e657dce663cf\\\"},\\\"fr\\\":{\\\"idpId\\\":\\\"eu-central-1:09875a7e-8590-4fe6-9a1a-308dc6430170\\\",\\\"appId\\\":\\\"d0db232ef2374935acc3e657dce663cf\\\"},\\\"de\\\":{\\\"idpId\\\":\\\"eu-central-1:09875a7e-8590-4fe6-9a1a-308dc6430170\\\",\\\"appId\\\":\\\"d0db232ef2374935acc3e657dce663cf\\\"},\\\"au\\\":{\\\"idpId\\\":\\\"ap-south-1:4cb91389-c2dd-40bc-9769-f5898ba3364f\\\",\\\"appId\\\":\\\"ffe2e69db89f48ff93f53c7f59e45ab4\\\"},\\\"in\\\":{\\\"idpId\\\":\\\"ap-south-1:4cb91389-c2dd-40bc-9769-f5898ba3364f\\\",\\\"appId\\\":\\\"ffe2e69db89f48ff93f53c7f59e45ab4\\\"},\\\"ca\\\":{\\\"idpId\\\":\\\"ca-central-1:b62eed98-7493-4df5-8199-2c8a9e3ebf1f\\\",\\\"appId\\\":\\\"7dc890a737fc4496b45eecfc0a96dd9e\\\"},\\\"at\\\":{\\\"idpId\\\":\\\"eu-central-1:09875a7e-8590-4fe6-9a1a-308dc6430170\\\",\\\"appId\\\":\\\"d0db232ef2374935acc3e657dce663cf\\\"}}",
+    "APP_ENV_SMS_JSON": "{\\\"1\\\":{\\\"type\\\":\\\"AWS.MM.SMS.OriginationNumber\\\",\\\"value\\\":\\\"+18337021814\\\"}}",
+    "APP_TEST_MODE": "0",
+    "APP_SUPPORTED_CELLNUMBER_COUNTRY_CODES": "{\\\"usdc\\\":[\\\"+1\\\",\\\"+91\\\"],\\\"br\\\":[\\\"+55\\\",\\\"+91\\\"],\\\"us\\\":[\\\"+1\\\",\\\"+91\\\"],\\\"it\\\":[\\\"+39\\\",\\\"+91\\\"]}",
+    "PREFERRED_PLATFORM": "ARM64",
+    "APP_SUPPORTED_API_VERSION": "6,7"
+  },
+  "MOBILE_CONFIG_VALUES": {
+    "DOSECHEK_URLS": {
+      "br": {
+        "pt": {
+          "url": "https://devpt.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-devpt.nprod.dosecheckapp.com",
+          "APP_ID": "573c1d2a12b545fe9254133d352482a8",
+          "POOL_ID": "us-east-1:60d2c23b-80e5-4070-81e0-17b7e8ecbf8f"
+        }
+      },
+      "it": {
+        "it": {
+          "url": "https://devit.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-devit.nprod.dosecheckapp.com",
+          "APP_ID": "573c1d2a12b545fe9254133d352482a8",
+          "POOL_ID": "us-east-1:60d2c23b-80e5-4070-81e0-17b7e8ecbf8f"
+        }
+      },
+      "fr": {
+        "fr": {
+          "url": "https://devfr-fr.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-devfr-fr.nprod.dosecheckapp.com",
+          "APP_ID": "d0db232ef2374935acc3e657dce663cf",
+          "POOL_ID": "eu-central-1:09875a7e-8590-4fe6-9a1a-308dc6430170"
+        }
+      },
+      "at": {
+        "de": {
+          "url": "https://devde-at.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-devde-at.nprod.dosecheckapp.com",
+          "APP_ID": "d0db232ef2374935acc3e657dce663cf",
+          "POOL_ID": "eu-central-1:09875a7e-8590-4fe6-9a1a-308dc6430170"
+        }
+      },
+      "sa": {
+        "en": {
+          "url": "https://deven-sa.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-deven-sa.nprod.dosecheckapp.com",
+          "APP_ID": "7f64df9e3ad243478e123bc044356ad3",
+          "POOL_ID": "us-east-1:28f56d3f-0b25-419d-a46e-bedf777464e9"
+        },
+        "ar": {
+          "url": "https://devar-sa.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-devar-sa.nprod.dosecheckapp.com",
+          "APP_ID": "7f64df9e3ad243478e123bc044356ad3",
+          "POOL_ID": "us-east-1:28f56d3f-0b25-419d-a46e-bedf777464e9"
+        }
+      },
+      "in": {
+        "en": {
+          "url": "https://deven-in.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-deven-in.nprod.dosecheckapp.com",
+          "APP_ID": "ffe2e69db89f48ff93f53c7f59e45ab4",
+          "POOL_ID": "ap-south-1:4cb91389-c2dd-40bc-9769-f5898ba3364f"
+        }
+      },
+      "au": {
+        "en": {
+          "url": "https://deven-au.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-deven-au.nprod.dosecheckapp.com",
+          "APP_ID": "ffe2e69db89f48ff93f53c7f59e45ab4",
+          "POOL_ID": "ap-south-1:4cb91389-c2dd-40bc-9769-f5898ba3364f"
+        }
+      },
+      "ca": {
+        "en": {
+          "url": "https://deven-ca.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-deven-in.nprod.dosecheckapp.com",
+          "APP_ID": "7dc890a737fc4496b45eecfc0a96dd9e",
+          "POOL_ID": "ca-central-1:b62eed98-7493-4df5-8199-2c8a9e3ebf1f"
+        },
+        "fr": {
+          "url": "https://devfr-ca.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-deven-in.nprod.dosecheckapp.com",
+          "APP_ID": "7dc890a737fc4496b45eecfc0a96dd9e",
+          "POOL_ID": "ca-central-1:b62eed98-7493-4df5-8199-2c8a9e3ebf1f"
+        }
+      },
+      "dk": {
+        "da": {
+          "url": "https://devda-dk.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-devda-dk.nprod.dosecheckapp.com",
+          "APP_ID": "d0db232ef2374935acc3e657dce663cf",
+          "POOL_ID": "eu-central-1:09875a7e-8590-4fe6-9a1a-308dc6430170"
+        },
+        "en": {
+          "url": "https://deven-dk.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-deven-dk.nprod.dosecheckapp.com",
+          "APP_ID": "d0db232ef2374935acc3e657dce663cf",
+          "POOL_ID": "eu-central-1:09875a7e-8590-4fe6-9a1a-308dc6430170"
+        }
+      },
+      "fi": {
+        "fi": {
+          "url": "https://devfi-fi.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-devfi-fi.nprod.dosecheckapp.com",
+          "APP_ID": "d0db232ef2374935acc3e657dce663cf",
+          "POOL_ID": "eu-central-1:09875a7e-8590-4fe6-9a1a-308dc6430170"
+        },
+        "sv": {
+          "url": "https://devsv-fi.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-devsv-fi.nprod.dosecheckapp.com",
+          "APP_ID": "d0db232ef2374935acc3e657dce663cf",
+          "POOL_ID": "eu-central-1:09875a7e-8590-4fe6-9a1a-308dc6430170"
+        },
+        "en": {
+          "url": "https://deven-fi.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-deven-fi.nprod.dosecheckapp.com",
+          "APP_ID": "d0db232ef2374935acc3e657dce663cf",
+          "POOL_ID": "eu-central-1:09875a7e-8590-4fe6-9a1a-308dc6430170"
+        }
+      },
+      "de": {
+        "de": {
+          "url": "https://devde-de.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-devde-de.nprod.dosecheckapp.com",
+          "APP_ID": "d0db232ef2374935acc3e657dce663cf",
+          "POOL_ID": "eu-central-1:09875a7e-8590-4fe6-9a1a-308dc6430170"
+        }
+      },
+      "ch": {
+        "de": {
+          "url": "https://devde-ch.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-devde-ch.nprod.dosecheckapp.com",
+          "APP_ID": "d0db232ef2374935acc3e657dce663cf",
+          "POOL_ID": "eu-central-1:09875a7e-8590-4fe6-9a1a-308dc6430170"
+        },
+        "fr": {
+          "url": "https://devfr-ch.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-devfr-ch.nprod.dosecheckapp.com",
+          "APP_ID": "d0db232ef2374935acc3e657dce663cf",
+          "POOL_ID": "eu-central-1:09875a7e-8590-4fe6-9a1a-308dc6430170"
+        },
+        "it": {
+          "url": "https://devit-ch.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-devit-ch.nprod.dosecheckapp.com",
+          "APP_ID": "d0db232ef2374935acc3e657dce663cf",
+          "POOL_ID": "eu-central-1:09875a7e-8590-4fe6-9a1a-308dc6430170"
+        }
+      },
+      "us": {
+        "en": {
+          "url": "https://deven-usdc.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-deven-usdc.nprod.dosecheckapp.com",
+          "APP_ID": "573c1d2a12b545fe9254133d352482a8",
+          "POOL_ID": "us-east-1:60d2c23b-80e5-4070-81e0-17b7e8ecbf8f"
+        },
+        "es": {
+          "url": "https://deves-usdc.nprod.dosecheckapp.com/",
+          "assetUrl": "https://resources-deves-usdc.nprod.dosecheckapp.com",
+          "APP_ID": "573c1d2a12b545fe9254133d352482a8",
+          "POOL_ID": "us-east-1:60d2c23b-80e5-4070-81e0-17b7e8ecbf8f"
+        }
+      }
+    },
+    "ISAGE_URLS": {
+      "us": {
+        "en": {
+          "url": "https://deven.nprod.isageapp.com/",
+          "assetUrl": "https://resources-deven.nprod.isageapp.com",
+          "APP_ID": "573c1d2a12b545fe9254133d352482a8",
+          "POOL_ID": "us-east-1:60d2c23b-80e5-4070-81e0-17b7e8ecbf8f"
+        }
+      }
+    }
+  }
+}
