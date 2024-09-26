@@ -44,8 +44,8 @@ jobs:
 
           echo "MOBILE_CONFIG_VALUES=$(echo $MOBILE_CONFIG_VALUES | jq -c '.')" >> "$GITHUB_ENV"
 
-          TEST=$(cat ./test.json | jq '(.| .isage | .scheme)')
-          echo "TEST=$TEST" >> $GITHUB_OUTPUT
+          TEST=$(cat ./test.json | jq '(.| .isage | .scheme)') >> $GITHUB_ENV
+          echo "TEST=${{ env.TEST }}" >> $GITHUB_OUTPUT
 
       - name: Substitute env variables in network.json file
         env:
