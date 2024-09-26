@@ -25,7 +25,7 @@ jobs:
 
       - name: filtering mobile configs
         run: |
-          echo "$(cat ./build_check_parameters.json | jq '(.isage | .buildParameters[] | select(.Environments | contains(["DEV"])) | .Value)')" > ios_build_config_values.json
+          echo "$(cat ./test.json | jq '(.isage | .buildParameters[] | select(.Environments | contains(["DEV"])) | .Value)')" > ios_build_config_values.json
 
       - name: Get build properties
         id: propsFromBuildConfig
