@@ -10,7 +10,6 @@
   "dosecheck": {
     "infoPlistName": "Novo-Info",
     "mobileConfigName": "DOSECHEK_URLS",
-    "scheme": ["NovoApp"],
     "buildParameters": [
       {
         "Environments": [
@@ -19,6 +18,9 @@
         "Value": {
           "buildTypeList": [
             "ENTERPRISE"
+          ],
+          "scheme": [
+            "NovoApp"
           ],
           "bundle_short_ver": "3.1.0",
           "aws_role_arn": "arn:aws:iam::424114987786:role/mobile-build-uploader-role",
@@ -58,6 +60,9 @@
           "buildTypeList": [
             "ENTERPRISE"
           ],
+          "scheme": [
+            "NovoApp"
+          ],
           "bundle_short_ver": "3.1.0",
           "aws_role_arn": "arn:aws:iam::424114987786:role/mobile-build-uploader-role",
           "exportTeamId": {
@@ -95,6 +100,9 @@
         "Value": {
           "buildTypeList": [
             "ENTERPRISE"
+          ],
+          "scheme": [
+            "NovoApp"
           ],
           "bundle_short_ver": "3.1.0",
           "aws_role_arn": "arn:aws:iam::424114987786:role/mobile-build-uploader-role",
@@ -134,6 +142,9 @@
           "buildTypeList": [
             "ENTERPRISE"
           ],
+          "scheme": [
+            "NovoApp"
+          ],
           "bundle_short_ver": "3.1.0",
           "aws_role_arn": "arn:aws:iam::424114987786:role/mobile-build-uploader-role",
           "exportTeamId": {
@@ -172,6 +183,9 @@
           "buildTypeList": [
             "ENTERPRISE",
             "RELEASE"
+          ],
+          "scheme": [
+            "NovoApp"
           ],
           "bundle_short_ver": "3.1.0",
           "aws_role_arn": "arn:aws:iam::709643934228:role/mobile-build-uploader-role",
@@ -216,7 +230,6 @@
   "isage": {
     "infoPlistName": "Info",
     "mobileConfigName": "ISAGE_URLS",
-    "scheme": ["iSage"],
     "buildParameters": [
       {
         "Environments": [
@@ -226,6 +239,7 @@
           "buildTypeList": [
             "ENTERPRISE"
           ],
+          "scheme": ["iSage"],
           "bundle_short_ver": "3.1.0",
           "aws_role_arn": "arn:aws:iam::424114987786:role/mobile-build-uploader-role",
           "exportTeamId": {
@@ -264,6 +278,7 @@
           "buildTypeList": [
             "ENTERPRISE"
           ],
+          "scheme": ["iSage"],
           "bundle_short_ver": "3.1.0",
           "aws_role_arn": "arn:aws:iam::424114987786:role/mobile-build-uploader-role",
           "exportTeamId": {
@@ -302,6 +317,7 @@
           "buildTypeList": [
             "ENTERPRISE"
           ],
+          "scheme": ["iSage"],
           "bundle_short_ver": "3.1.0",
           "aws_role_arn": "arn:aws:iam::424114987786:role/mobile-build-uploader-role",
           "exportTeamId": {
@@ -340,6 +356,7 @@
           "buildTypeList": [
             "ENTERPRISE"
           ],
+          "scheme": ["iSage"],
           "bundle_short_ver": "3.1.0",
           "aws_role_arn": "arn:aws:iam::424114987786:role/mobile-build-uploader-role",
           "exportTeamId": {

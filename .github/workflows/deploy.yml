@@ -27,33 +27,33 @@ jobs:
         run: |
           echo "$(cat ./test.json | jq '(.| .MOBILE_CONFIG_VALUES | .ISAGE_URLS)')" > ios_build_config_values.json
 
-      - name: prop file json to env variables
-        uses: antifree/json-to-variables@v1.2.0
+      - name: Get build properties
+        id: propsFromBuildConfig
+        uses: RadovanPelka/github-action-json@main
         with:
-          filename: test.json
+          path: "ios_build_config_values.json"
 
       - name: test
         id: test
         run: |
-          MOBILE_CONFIG_VALUES=$(cat ios_build_config_values.json)
-          ESCAPED_MOBILE_CONFIG_VALUES=$(echo $MOBILE_CONFIG_VALUES | jq -c '.')
+          # MOBILE_CONFIG_VALUES=$(cat ios_build_config_values.json)
+          # ESCAPED_MOBILE_CONFIG_VALUES=$(echo $MOBILE_CONFIG_VALUES | jq -c '.')
 
-          echo "************************"
-          echo "ESCAPED_MOBILE_CONFIG_VALUES : $ESCAPED_MOBILE_CONFIG_VALUES"
-          echo "************************"
+          # echo "************************"
+          # echo "ESCAPED_MOBILE_CONFIG_VALUES : $ESCAPED_MOBILE_CONFIG_VALUES"
+          # echo "************************"
 
-          echo "MOBILE_CONFIG_VALUES=$(echo $MOBILE_CONFIG_VALUES | jq -c '.')" >> "$GITHUB_ENV"
+          # echo "MOBILE_CONFIG_VALUES=$(echo $MOBILE_CONFIG_VALUES | jq -c '.')" >> "$GITHUB_ENV"
 
-          TEST=$(jq '(.| .isage | .scheme)' ./test.json ) >> $GITHUB_ENV
-          echo "TEST=${{ toJson(env.TEST) }}" >> $GITHUB_OUTPUT
+          echo "scheme=$${{ toJSON(steps.propsFromBuildConfig.outputs.scheme) }}" >> $GITHUB_OUTPUT
 
-      - name: Substitute env variables in network.json file
-        env:
-          MOBILE_CONFIG_VALUES: "${{ env.MOBILE_CONFIG_VALUES }}"
-        uses: danielr1996/envsubst-action@1.1.0
-        with:
-          input: "./network.json"
-          output: "./Network-Final.json"
+      # - name: Substitute env variables in network.json file
+      #   env:
+      #     MOBILE_CONFIG_VALUES: "${{ env.MOBILE_CONFIG_VALUES }}"
+      #   uses: danielr1996/envsubst-action@1.1.0
+      #   with:
+      #     input: "./network.json"
+      #     output: "./Network-Final.json"
 
       # - name: testing construction
       #   run: |
@@ -61,5 +61,5 @@ jobs:
 
       - name: final test
         run: |
-          cat "./Network-Final.json"
-          echo "test: ${{ steps.test.outputs.TEST }}"
+          # cat "./Network-Final.json"
+          echo "test: ${{ steps.test.outputs.scheme }}"
