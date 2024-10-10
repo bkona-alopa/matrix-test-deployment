@@ -31,7 +31,6 @@ jobs:
         run: echo "matrix=${{ env[format('{0}',inputs.environment)] }}"  >> $GITHUB_OUTPUT
         
   call-workflow-in-local-repo-DEV:
-    if: ${{ inputs.environment == 'DEV' }}
     strategy:
       matrix:
         env_supported:
@@ -40,14 +39,3 @@ jobs:
     with:
       deployment_environment: ${{ matrix.env_supported }}
       product_name: "DEV"
-
-  call-workflow-in-local-repo-TEST:
-    if: ${{ inputs.environment == 'TEST' }}
-    strategy:
-      matrix:
-        env_supported:
-          ${{ fromJson(needs.Getting-Countries.outputs.matrix) }}
-    uses: ./.github/workflows/deploy.yml
-    with:
-      deployment_environment: ${{ matrix.env_supported }}
-      product_name: "TEST"
