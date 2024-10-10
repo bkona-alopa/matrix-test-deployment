@@ -35,7 +35,7 @@ jobs:
     strategy:
       matrix:
         env_supported:
-          ${{ fromJson(needs.Getting-Countries.outputs.matrix) }}
+          ${{ needs.Getting-Countries.outputs.matrix }}
     uses: ./.github/workflows/deploy.yml
     with:
       deployment_environment: ${{ matrix.env_supported }}
