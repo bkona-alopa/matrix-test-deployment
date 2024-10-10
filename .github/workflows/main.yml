@@ -9,7 +9,7 @@ on:
 env:
 #
   DEV: "['DEVAP-in']"
-  TEST: "['DCPRODEU-it','DCPRODEU-fr','DCPRODEU-dk','DCPRODEU-fi','DCPRODEU-ch']"
+  TEST: "['DCPRODEU-it', 'DCPRODEU-fr', 'DCPRODEU-dk', 'DCPRODEU-fi', 'DCPRODEU-ch']"
 
 permissions:
   id-token: write
